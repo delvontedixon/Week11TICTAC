@@ -64,15 +64,8 @@ function squareClicked(i) {
   }
   checkWinner();
   if (currentPlayer === "X") {
-    currentplayer = "O";
+    currentPlayer = "O";
   } else {
     currentPlayer = "X";
   }
-
-  console.log(playedSquares);
-  console.log("Player X Squares ", xArray);
-  console.log(
-    "Player O Squares ",
-    oArray
-  ); /*This puts the resective squares in their arrays in the console*/
 }
