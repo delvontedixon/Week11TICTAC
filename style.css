@@ -1,0 +1,16 @@
+.square {
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+
+.board {
+  margin-top: 5%;
+  display: grid;
+  justify-content: center;
+}
