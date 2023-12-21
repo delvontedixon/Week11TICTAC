@@ -10,13 +10,31 @@ let currentPlayer = "X";
 let playedSquares = [];
 let xArray = [];
 let oArray = [];
+let winningCombos = [[1,2,3], [4,5,6], [7,8,9], [1,4,7], [2,5,8], [3,6,9],
+[1,5,9], [7,5,3]]
 
-for (let i = 1; i <= 9; i++) {
+
+function checkWinner() {
+    for(let i = 0; i < winningCombos.length; i++){
+        for(let x = 0; x < winningCombos[i].length; x++){
+            if(playedSquares.length != 9){console.log("NO WINNER");}
+    if(xArray.includes(winningCombos[i][0]) && xArray.includes(winningCombos[i][1]) && xArray.includes(winningCombos[i][2]){
+        console.log(`${currentPlayer} is the WINNER`);
+    } else if (oArray.includes(winningCombos[i][0])&& oArray.includes(winningCombos[i][1]) && oArray.includes(winningCombos[i][2])) {
+        console.log(`${currentPlayer} is the WINNER`);
+    }
+}
+}
+}
+
+
+for(let i = 1; i <= 9; i++) {
+
   let square = document.getElementById(i);
   square.addEventListener("click", () => squareClicked(i));
 }
 
-function squareClicked() {
+function squareClicked(i) {
   if (!playedSquares.includes(i)) {
     /*This prevents duplicate values*/
     console.log(i, playedSquares);
@@ -29,6 +47,7 @@ function squareClicked() {
   } else {
     oArray.push(i);
   }
+  checkWinner();
   if (currentPlayer === "X") {
     currentplayer = "O";
   } else {
