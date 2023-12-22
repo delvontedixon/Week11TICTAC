@@ -33,12 +33,14 @@ function checkWinner() {
         xArray.includes(winningCombos[i][2])
       ) {
         console.log(`${currentPlayer} is the WINNER`);
+        alert("X Player is the winner");
       } else if (
         oArray.includes(winningCombos[i][0]) &&
         oArray.includes(winningCombos[i][1]) &&
         oArray.includes(winningCombos[i][2])
       ) {
         console.log(`${currentPlayer} is the WINNER`);
+        alert("O Player is the winner");
       }
     }
   }
